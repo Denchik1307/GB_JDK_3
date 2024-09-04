@@ -40,7 +40,7 @@ public class EmployeeDirectory implements IEmployeeDirectory {
                 .filter(employee -> employee.getPhone().equals(phone))
                 .findFirst()
                 .orElse(null);
-        showEmployee("By phone:\n",tmp);
+        showEmployee("By phone:",tmp);
         return tmp;
     }
 
@@ -59,12 +59,14 @@ public class EmployeeDirectory implements IEmployeeDirectory {
                 .filter(employee -> employee.getID() == id)
                 .findFirst()
                 .orElse(null);
-        showEmployee("By ID:\n",tmp);
+        showEmployee("By ID:",tmp);
         return tmp;
     }
 
     private void showEmployee(String marker, Employee employee) {
-        System.out.println(marker + employee + "\n");
+        System.out.println(marker);
+        System.out.println(employee);
+        System.out.println();
     }
 
     private void showEmployeeList(String marker, List<Employee> list) {
