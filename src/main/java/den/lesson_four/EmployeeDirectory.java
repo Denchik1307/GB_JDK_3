@@ -2,6 +2,7 @@ package den.lesson_four;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Objects;
 
 public class EmployeeDirectory implements IEmployeeDirectory {
 
@@ -49,7 +50,7 @@ public class EmployeeDirectory implements IEmployeeDirectory {
         List<Employee> employers = employeeList.stream()
                 .filter(employee -> employee.getSurname().equals(surname))
                 .toList();
-        showEmployeeList("By surname: " + surname, employeeList);
+        showEmployeeList("By surname: " + surname, employers);
         return employers;
     }
 

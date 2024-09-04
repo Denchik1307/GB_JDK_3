@@ -39,10 +39,10 @@ public class Employee {
 
     @Override
     public String toString() {
-        return  "ID=" + ID +
-                ", phone'" + phone +
-                ", name'" + name +
-                ", surname" + surname +
-                ", experience=" + experience;
+        return  "ID: " + ID +
+                ", phone: " + phone +
+                ", name: " + name +
+                ", surname: " + surname +
+                ", experience: " + experience;
     }
 }
