@@ -1,7 +1,5 @@
 package den.lesson_four;
 
-import java.util.List;
-
 /*
 Создать справочник сотрудников
 Необходимо:
@@ -20,9 +18,9 @@ import java.util.List;
 public class Main {
     public static void main(String[] args) {
         IEmployeeDirectory employeeDirectory = new EmployeeDirectory();
-        Employee p1 = new Employee(1,"45869587","Ivan", "Ezha", 5);
-        Employee p2 = new Employee(2,"58965785","Alex", "Djecson", 3);
-        Employee p3 = new Employee(3,"58965785","Svetlana", "Ruber", 3);
+        Employee p1 = new Employee(1, "45869587", "Ivan", "Ezha", 5);
+        Employee p2 = new Employee(2, "58965785", "Alex", "Djecson", 3);
+        Employee p3 = new Employee(3, "58965785", "Svetlana", "Ruber", 3);
 
         employeeDirectory.addEmployee(p1);
         employeeDirectory.addEmployee(p2);
@@ -35,8 +33,4 @@ public class Main {
         employeeDirectory.findById(3);
         employeeDirectory.findById(4);
     }
-
-//    public String listToString(List<Employee> list){
-//
-//    }
 }

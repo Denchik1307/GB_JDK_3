@@ -1,13 +1,11 @@
 package den.lesson_four;
 
-import java.util.List;
-
 public class Employee {
-    private int ID;
-    private String phone;
-    private String name;
-    private String surname;
-    private int experience;
+    private final int ID;
+    private final String phone;
+    private final String name;
+    private final String surname;
+    private final int experience;
 
     public Employee(int ID, String phone, String name, String surname, int experience) {
         this.ID = ID;
@@ -39,7 +37,7 @@ public class Employee {
 
     @Override
     public String toString() {
-        return  "ID: " + ID +
+        return "ID: " + ID +
                 ", phone: " + phone +
                 ", name: " + name +
                 ", surname: " + surname +
