@@ -40,7 +40,7 @@ public class EmployeeDirectory implements IEmployeeDirectory {
         Employee tmp = employeeList.stream()
                 .filter(employee -> employee.getPhone().equals(phone))
                 .findFirst()
-                .orElse(null);
+                .orElse(new Employee(0,"none","none","none",0));
         showEmployee("By phone: " + phone, tmp);
         return tmp;
     }
@@ -59,7 +59,7 @@ public class EmployeeDirectory implements IEmployeeDirectory {
         Employee tmp = employeeList.stream()
                 .filter(employee -> employee.getID() == id)
                 .findFirst()
-                .orElse(null);
+                .orElse(new Employee(0,"none","none","none",0));
         showEmployee("By ID: " + id, tmp);
         return tmp;
     }
