@@ -21,7 +21,7 @@ public class EmployeeDirectory implements IEmployeeDirectory {
         List<Employee> employees = employeeList.stream()
                 .filter(employee -> employee.getExperience() == experience)
                 .toList();
-        showEmployeeList("By experience:",employees);
+        showEmployeeList("By experience: " + experience, employees);
         return employees;
     }
 
@@ -30,7 +30,7 @@ public class EmployeeDirectory implements IEmployeeDirectory {
         List<Employee> employees = employeeList.stream()
                 .filter(employeeName -> employeeName.getName().equals(name))
                 .toList();
-        showEmployeeList("By name:",employees);
+        showEmployeeList("By name: " + name, employees);
         return employees;
     }
 
@@ -40,7 +40,7 @@ public class EmployeeDirectory implements IEmployeeDirectory {
                 .filter(employee -> employee.getPhone().equals(phone))
                 .findFirst()
                 .orElse(null);
-        showEmployee("By phone:",tmp);
+        showEmployee("By phone: " + phone, tmp);
         return tmp;
     }
 
@@ -49,7 +49,7 @@ public class EmployeeDirectory implements IEmployeeDirectory {
         List<Employee> employers = employeeList.stream()
                 .filter(employee -> employee.getSurname().equals(surname))
                 .toList();
-        showEmployeeList("By surname:", employeeList);
+        showEmployeeList("By surname: " + surname, employeeList);
         return employers;
     }
 
@@ -59,7 +59,7 @@ public class EmployeeDirectory implements IEmployeeDirectory {
                 .filter(employee -> employee.getID() == id)
                 .findFirst()
                 .orElse(null);
-        showEmployee("By ID:",tmp);
+        showEmployee("By ID: " + id, tmp);
         return tmp;
     }
 
