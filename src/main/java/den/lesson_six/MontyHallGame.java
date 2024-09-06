@@ -1,11 +1,12 @@
 package den.lesson_six;
 
 import lombok.Data;
+
 import java.util.HashMap;
 import java.util.Random;
 
-@Data
-public class MontyHallGame {
+
+public @Data class MontyHallGame {
     private final int totalGames;
     private final Random random = new Random();
 
@@ -24,9 +25,9 @@ public class MontyHallGame {
 
             if (resultSwitch) {
                 winsSwitch++;
-                results.put(i, "Win (Switch)");
+                results.put(i, "Win (Switch)\n");
             } else {
-                results.put(i, "Lose (Switch)");
+                results.put(i, "Lose (Switch)\n");
             }
 
             if (resultStay) {
@@ -74,6 +75,8 @@ public class MontyHallGame {
         System.out.println("Total Games: " + totalGames);
         System.out.println("Wins by switching: " + winsSwitch + " (" + (double) winsSwitch / totalGames * 100 + "%)");
         System.out.println("Wins by staying: " + winsStay + " (" + (double) winsStay / totalGames * 100 + "%)");
-        System.out.println("Detailed Results: " + results);
+        StringBuilder stringBuilder = new StringBuilder();
+        results.forEach((key, value) -> stringBuilder.append(key).append("=").append(value));
+        System.out.println("Detailed Results: \n" + stringBuilder);
     }
 }
